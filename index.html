@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./styles/modern-normalize.css" type="text/css" />
+    <link rel="stylesheet" href="./styles/style.css" type="text/css" />
+    <link rel="stylesheet" href="./styles/components/header.css" type="text/css" />
+    <link rel="stylesheet" href="./styles/components/hero.css" type="text/css" />
+    <link rel="stylesheet" href="./styles/components/about.css" type="text/css" />
+    <link rel="stylesheet" href="./styles/components/featured.css" type="text/css" />
+    <link rel="stylesheet" href="./styles/components/work.css" type="text/css" />
+    <link rel="stylesheet" href="./styles/components/contact.css" type="text/css" />
+    <link rel="stylesheet" href="./styles/components/footer.css" type="text/css" />
+    <link rel="stylesheet" href="./styles/components/mobile-nav.css" type="text/css" />
+    <link rel="stylesheet" href="./styles/utils.css" type="text/css" />
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="public/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=general-sans@500,600,400,700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="description" content="Portfolio" />
+    <meta name="keywords" content="s/4 hana abap, ui5 fiori, odata, java, springboot, jdbc, jpa, docker, python3, data science and machine learning, data structures and algorithm
+    sql, web design, html, css, js, jasmine" />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <header class="header container">
+      <nav>
+        <ul class="header__menu">
+          <li>
+            <a class="header__link" href="#about">About</a>
+          </li>
+          <li>
+            <a class="header__link" href="#featured">Work</a>
+          </li>
+          <li>
+            <a class="header__link" href="#contact">Contact</a>
+          </li>
+          <li class="header__line"></li>
+          <li>
+            <a >Theme</a>
+          </li>
+          <li>
+            <button
+              aria-label="theme-toggle btn"
+              id="theme-toggle"
+              class="header__sun"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"
+                />
+              </svg>
+            </button>
+          </li>
+          <li>
+            <a class="header__resume btn" onclick="window.open('public/Resume-AdityaSingh.pdf'); return true;">Resume</a>
+          </li>
+        </ul>
+        <button aria-label="mobile nav button" class="header__bars">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </button>
+      </nav>
+    </header>
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+      <nav>
+        <ul class="mobile-nav__menu">
+          <li>
+            <a class="mobile-nav__link" href="#about">About</a>
+          </li>
+          <li>
+            <a class="mobile-nav__link" href="#featured">Work</a>
+          </li>
+          <li>
+            <a class="mobile-nav__link" href="#contact">Contact</a>
+          </li>
+          <li class="mobile-nav__link-line"></li>
+          <li>
+            <button
+              aria-label="theme-toggle btn"
+              id="theme-toggle"
+              class="mobile-nav__sun"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"
+                />
+              </svg>
+            </button>
+          </li>
+          <li>
+            <a class="mobile-nav__btn btn" onclick="window.open('public/Resume-AdityaSingh.pdf'); return true;">Resume</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- End of Mobile Navigation -->
+    <main>
+      <section class="hero container">
+        <h2 class="hero__subtitle">Yo! Aditya here 👋</h2>
+        <h1 class="hero__title">
+          Application Developer
+        </h1>
+        <p class="hero__description">
+        </p>
+        <a class="hero__btn btn" href="chat.html" target="_blank">Start a Conversation</a>
+      </section>
+      <section id="about" class="about container section">
+        <div class="about__content">
+          <h2 class="about__title">About</h2>
+          <p class="about__description">
+            Passionate and skilled developer with 2.5+ years of experience crafting innovative solutions using modern technologies. Proven expertise in <strong>SAP ABAP 
+              (HANA & ECC), OData, UI5 Fiori, JavaScript, React.js</strong>, and testing frameworks <strong>(Jasmine, JUnit)</strong>. Adept in <strong>Python3, Java (SpringBoot, JPA, JDBC)</strong>
+              , and <strong>Docker</strong>. 
+              Demonstrated understanding of the SDLC, I constantly strive to stay ahead of the curve in the ever-changing tech environment.
+          </p>
+          <p class="about__description">
+            In December 2022, I started a freelancing firm, <a>FacileWizards</a>, where we solve problems in facile ways.
+          </p>
+          <p class="about__description">
+            It's worth mentioning that in addition to my tech stack, I am also adept in business practices such as <strong>Process design, Solutions design</strong>, and 
+          <strong>Solutions marketing</strong>.
+          </p>
+          <hr class="about__hr" />
+          <h3 class="about__subtitle">Technologies</h3>
+          <div class="about__ul-container">
+            <ul class="about__ul">
+              <li class="about__list">SAP ABAP (HANA & ECC)</li>
+              <li class="about__list">OData</li>
+              <li class="about__list">UI5 Fiori</li>
+            </ul>
+            <ul class="about__ul">
+              <li class="about__list">Python3</li>
+              <li class="about__list">Data Science and Machine Learning</li>
+              <li class="about__list">Java (SpringBoot, JPA, JDBC, JUnit)</li>
+            </ul>
+            <ul class="about__ul">
+              <li class="about__list">Docker</li>
+              <li class="about__list">Data Structures and Algorithm</li>
+              <li class="about__list">SQL</li>
+            </ul>
+            <ul class="about__ul">
+              <li class="about__list">JavaScript</li>
+              <li class="about__list">React.js</li>
+              <li class="about__list">Jasmine</li>
+            </ul>
+          </div>
+        </div>
+        <div class="about__img-wrapper">
+        </div>
+      </section>
+      <section id="featured" class="featured container section">
+        <h3 class="featured__subtitle">Projects</h3>
+        <div class="featured__wrapper">
+          <h2 class="featured__title">Amazon Clone</h2>
+          <a
+            aria-label="link featured projects"
+            class="featured__link"
+            href="https://facilewizard.github.io/amazoneclone/" target="_blank"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
+              />
+            </svg>
+          </a>
+        </div>
+        <p class="featured__description">
+          This project involved building a fully functional 
+          e-commerce website frontend, replicating core features of Amazon. This project served as a valuable learning experience, 
+          solidifying my frontend development skills and preparing me to actively contribute to our client's ongoing e-commerce website development. 
+          To enhance user experience, I implemented several key functionalities:
+        </p>
+        <ul class="about__ul">
+          <li class="about__list"><b>Unique Order IDs: </b>Each order generates a unique ID, ensuring proper tracking and management.</li>
+          <li class="about__list"><b>Persistent Cart: </b>Utilizing localStorage, the cart remains populated even after closing the browser window, simplifying checkout for returning users.</li>
+          <li class="about__list"><b>Dynamic Cart Updates: </b>Users can adjust their cart during checkout, offering flexibility in order customization.</li>
+          <li class="about__list"><b>Real-time Delivery Estimates: </b>The estimated delivery time automatically updates based on the chosen delivery option, providing clear information to the customer.</li>
+          <li class="about__list"><b>Order Tracking and History: </b>Users can easily track placed orders, view their history, and access details from the dedicated "Returns and Orders" section.</li>
+        </ul>
+        <br/>
+        <div class="featured__info-container">
+          <div>
+            <h3 class="featured__label">Tech stack</h3>
+            <ul class="featured__tech-stack">
+              <li class="featured__info">JavaScript</li>
+              <li class="featured__info">ReactJS</li>
+              <li class="featured__info">HTML</li>
+              <li class="featured__info">CSS</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="featured__label">Testing FrameWork</h3>
+            <p class="featured__info">Jasmine</p>
+          </div>
+          <div>
+            <h3 class="featured__label">Project Type</h3>
+            <p class="featured__info">FrontEnd</p>
+          </div>
+        </div>
+        <div class="featured__img-container">
+          <div class="featured__img-wrapper">
+            <img
+              class="lazy loading"
+              src="https://via.placeholder.com/1920x968"
+              data-src="public/amazonhomepage.png"
+              alt="Home Page"
+            />
+          </div>
+          <div class="featured__img-wrapper">
+            <img
+              class="lazy loading"
+              src="https://via.placeholder.com/1920x968"
+              data-src="public/checkoutpage.png"
+              alt="Checkout Page"
+            />
+          </div>
+          <div class="featured__img-wrapper">
+            <img
+              class="lazy loading"
+              src="https://via.placeholder.com/1920x968"
+              data-src="public/checkoutpage2.png"
+              alt="Checkout Page with other Deliver Options"
+            />
+            
+          </div>
+          <div class="featured__img-wrapper">
+            <img
+            class="lazy loading"
+            src="https://via.placeholder.com/1920x968"
+            data-src="public/successfulorder.png"
+            alt="Successfull order Page"
+          />
+
+          </div>
+          <div class="featured__img-wrapper">
+            <img
+              class="lazy loading"
+              src="https://via.placeholder.com/1920x968"
+              data-src="public/orderspage.png"
+              alt="Orders Page"
+            />
+          </div>
+          <div class="featured__img-wrapper">
+            <img
+            class="lazy loading"
+            src="https://via.placeholder.com/1920x968"
+            data-src="public/trackpage.png"
+            alt="Track Page"
+          />
+          </div>
+        </div>
+      </section>
+      <section id="featured" class="featured container section">
+        <div class="featured__wrapper">
+          <h2 class="featured__title">Business Analysis</h2>
+          <a
+            aria-label="link featured projects"
+            class="featured__link"
+            href="https://github.com/facileWizard/Business-Analysis" target="_blank"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
+              />
+            </svg>
+          </a>
+        </div>
+        <p class="featured__description">
+          This project aimed to develop a data-driven approach for identifying promising business ventures in a specific geographical area. Here's how I achieved this:
+        </p>
+        <ul class="about__ul">
+          <li class="about__list"><b>Public Data: </b>Utilized publicly available data from Wikipedia for initial model training and demonstration purposes.</li>
+          <li class="about__list"><b>Confidential Data: </b>Incorporated client-specific data (details remain confidential) to further refine the model for real-world application scenarios.</li>
+          <li class="about__list">Employed the <b>K-Means</b> clustering algorithm to group similar business proposals based on relevant factors influencing success potential.</li>
+          <li class="about__list">Analyzed the success rate of various existing businesses within the targeted area.</li>
+          <li class="about__list">Presented the clustered data on an interactive, real-time map for efficient visual analysis and comprehension.</li>
+          <li class="about__list">Used Toronto, Canada, as a case study, but the approach is replicable for other locations with appropriate data availability.</li>
+        </ul>
+        <br/>
+        <h3 class="featured__label">Key Takeaways:</h3>
+        <ul class="about__ul">
+        <li class="about__list">Work with various data sources, including public and confidential data.</li>
+        <li class="about__list">Apply machine learning techniques (K-Means clustering) for data analysis and business decision-making.</li>
+        <li class="about__list">Translate complex data into clear and concise visualizations using real-time mapping tools.</li></ul>
+        <br/>
+        <div class="featured__info-container">
+          <div>
+            <h3 class="featured__label">Tech stack</h3>
+            <ul class="featured__tech-stack">
+              <li class="featured__info">Python3</li>
+              <li class="featured__info">Libraries: Numpy, Pandas, Geopy and Matplotlib.  </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="featured__label">Tools Used</h3>
+            <p class="featured__info">Jupyter Notebook</p>
+          </div>
+          <div>
+            <h3 class="featured__label">Project Type</h3>
+            <p class="featured__info">Data Science and Machine Learning Model</p>
+          </div>
+        </div>
+      </section>
+      <section id="featured" class="featured container section">
+        <div class="featured__wrapper">
+          <h2 class="featured__title">Global Time Converter</h2>
+          <a
+            aria-label="link featured projects"
+            class="featured__link"
+            href="https://github.com/facileWizard/Global-Time-Converter" target="_blank"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
+              />
+            </svg>
+          </a>
+        </div>
+        <p class="featured__description">
+          This project involved developing a Java application that converts time between different time zones, designed to function without internet connectivity.
+        </p>
+        <ul class="about__ul">
+          <li class="about__list"><b>Offline Functionality: </b>Enables time zone conversion on the go, regardless of internet availability.</li>
+          <li class="about__list"><b>Comprehensive Zone Support: </b>Utilizes all time zones readily available within the java.time package for comprehensive coverage.</li>
+        </ul>
+        <br/>
+        <h3 class="featured__label">Project Goals:</h3>
+        <ul class="about__ul">
+        <li class="about__list"><b>Deployment Experience: </b>Gain practical experience in the application deployment process.</li>
+        <li class="about__list"><b>Testing and Quality Assurance: </b>Implement a rigorous unit testing regime to ensure:</li>
+        <ul class="about__ul">
+        <li class="about__list1"><b>Robust Exception Handling: </b>Proper handling of potential exceptions and unexpected user inputs.</li>
+        <li class="about__list1"><b>Input Validation: </b>Effective validation of user input to handle "weird" or invalid entries.</li> </ul>
+        </ul>
+        <br/>
+        <div class="featured__info-container">
+          <div>
+            <h3 class="featured__label">Tech stack</h3>
+            <ul class="featured__tech-stack">
+              <li class="featured__info">Java (SpringBoot, JPA, JDBC, Junit)</li>
+              <li class="featured__info">Libraries: Java.time</li>
+              <li class="featured__info">Docker</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="featured__label">Testing Framework</h3>
+            <p class="featured__info">Junit</p>
+          </div>
+          <div>
+            <h3 class="featured__label">Project Type</h3>
+            <p class="featured__info">Application Develoment</p>
+          </div>
+        </div>
+      </section>
+      <section id="featured" class="featured container section">
+        <div class="featured__wrapper">
+          <h2 class="featured__title">ECP and ABAP Implementation</h2>
+        </div>
+        <h3>Client: Beam Consolidated</h3>
+        <p class="featured__description">
+          This project focused on optimizing the payroll process for the organization using SAP technologies. Here's what I achieved:
+        </p>
+        <ul class="about__ul">
+          <li class="about__list"><b>ECP and ABAP on HANA Implementation: </b>Successfully implemented SAP Enterprise Central Component (ECC) and ABAP programming language on the HANA database platform. 
+            This enhanced performance and efficiency for core business processes.</li>
+          <li class="about__list"><b>Automated Payslip Generation: </b>Developed a system that automatically generates payslip PDFs for each employee, streamlining the process and reducing manual effort.</li>
+          <li class="about__list"><b>Monthly Whatsapp Delivery: </b> Integrated a system to deliver payslips directly to employees' WhatsApp accounts every month, ensuring timely and convenient access to their pay information.</li>
+          <li class="about__list"><b>Third-Party Integration via RESTful APIs: </b>Created secure RESTful APIs (web services) to seamlessly transfer payroll data to a third-party portal, enabling efficient data exchange.</li>
+          <li class="about__list"><b>QR Code Generation and Mobile App Integration: </b>Designed a program that generates QR codes on payslips. Scanning these codes redirects users to dedicated Android and iOS applications (details can be mentioned if applicable).</li>
+          <li class="about__list"><b>RICEF Development: </b>Developed and maintained essential RICEF (Reports, Interfaces, Conversions, Enhancements, and Forms) elements to support daily operations and user needs within the SAP landscape.</li>
+        </ul>
+        <br/>
+        <h3 class="featured__label">Project Impact:</h3>
+        <ul class="about__ul">
+        <li class="about__list">Increased efficiency and accuracy in payroll processing.</li>
+        <li class="about__list">Improved employee experience with timely and convenient payslip access.</li>
+        <li class="about__list">Enhanced data exchange with third-party systems.</li>
+        <li class="about__list">Streamlined daily operations through RICEF development.</li></ul>
+        <br/>
+        <div class="featured__info-container">
+          <div>
+            <h3 class="featured__label">Tech stack</h3>
+            <ul class="featured__tech-stack">
+              <li class="featured__info">SAP ABAP (HANA & ECC)</li>
+              <li class="featured__info">OData</li>
+              <li class="featured__info">UI5 Fiori</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="featured__label">Project Type</h3>
+            <p class="featured__info">Implementation: Middle Eastern Payroll</p>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="contact container section">
+        <h2 class="contact__title">Get In Contact</h2>
+        <p class="contact__description">
+          <strong>Ready to collaborate?</strong> Drop me a line if you're interested in working together on a project or simply want to chat about the tech world.
+        </p>
+        <a
+          class="contact__btn btn"
+          href="mailto:kumaradityasingh1901@gmail.com"
+          target="_blank"
+          >Connect With Me</a
+        >
+      </section>
+    </main>
+    <footer class="footer container section">
+      <h3 class="footer__title">~ Aditya Kumar Singh ~</h3>
+    </footer>
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
